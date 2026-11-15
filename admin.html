@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#090909"><title>Extravagant — Admin</title><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="admin.css"></head>
+<body class="admin-body">
+<header class="admin-header"><a class="wordmark" href="index.html">EXTRAVAGANT<span>.</span></a><a href="index.html" class="text-link">← View storefront</a></header>
+<main class="admin-wrap">
+  <section id="loginPanel" class="admin-panel login-panel">
+    <p class="eyebrow">PRIVATE STAFF AREA</p><h1>Admin sign in</h1><p class="muted">Sign in with the staff account created in your Supabase project.</p>
+    <form id="loginForm" class="admin-form"><label>Email<input type="email" name="email" required autocomplete="username"></label><label>Password<input type="password" name="password" required autocomplete="current-password"></label><button class="button button-gold button-full">Sign in</button><p class="form-message" id="loginMessage"></p></form>
+    <p class="small-note">No public sign-up is provided. Create staff accounts in the Supabase dashboard and explicitly grant admin access using the setup guide.</p>
+  </section>
+
+  <section id="dashboard" hidden>
+    <div class="admin-title"><div><p class="eyebrow">EXTRAVAGANT MANAGEMENT</p><h1>Store dashboard</h1></div><button class="button button-outline" id="logoutButton">Sign out</button></div>
+    <div class="admin-tabs"><button class="admin-tab active" data-tab="productsTab">Products</button><button class="admin-tab" data-tab="ordersTab">Orders</button></div>
+    <section id="productsTab" class="admin-panel">
+      <div class="panel-heading"><div><h2>Products</h2><p class="muted">Add, edit and hide products in your storefront.</p></div><button class="button button-gold" id="newProductButton">+ Add product</button></div>
+      <form id="productForm" class="admin-form product-form" hidden>
+        <input type="hidden" name="id">
+        <label>Product name<input name="name" required maxlength="120"></label>
+        <label>Category<select name="category"><option>Eyewear</option><option>Computers</option><option>Phones</option><option>Accessories</option></select></label>
+        <label>Price (ZMW)<input name="price" type="number" min="0" step="0.01" required></label>
+        <label>Image URL<input name="image_url" required placeholder="images/product-photo.jpg"></label>
+        <label>Description<textarea name="description" rows="3"></textarea></label>
+        <label class="checkbox-label"><input type="checkbox" name="active" checked> Visible in storefront</label>
+        <div class="form-actions"><button class="button button-gold">Save product</button><button type="button" class="button button-outline" id="cancelProduct">Cancel</button></div>
+        <p class="form-message" id="productMessage"></p>
+      </form>
+      <div id="adminProducts" class="admin-list"><p class="muted">Loading products…</p></div>
+    </section>
+    <section id="ordersTab" class="admin-panel" hidden>
+      <div class="panel-heading"><div><h2>Customer orders</h2><p class="muted">Review requests and update order/payment status after verification.</p></div><button class="button button-outline" id="refreshOrders">Refresh</button></div>
+      <div id="adminOrders" class="admin-list"><p class="muted">Loading orders…</p></div>
+    </section>
+  </section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="config.js"></script><script src="admin.js"></script>
+</body></html>

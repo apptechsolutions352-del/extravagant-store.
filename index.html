@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="Discover premium eyewear, computers, smartphones and accessories at Extravagant.">
+  <title>Extravagant — Quality. Style. Technology.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement">A considered collection of style and technology <span>·</span> Shop in Zambia</div>
+  <header class="site-header">
+    <a class="wordmark" href="#home" aria-label="Extravagant home">EXTRAVAGANT<span>.</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav">
+      <a href="#home">Home</a><a href="#collections">Collections</a><a href="#products">Shop</a><a href="#about">Our story</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button" id="cartOpen" aria-label="Open shopping bag">Bag <span id="cartCount">0</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">THE EXTRAVAGANT EDIT</p>
+        <h1>Distinctive style.<br><em>Exceptional</em> technology.</h1>
+        <p class="hero-description">Discover carefully selected eyewear, computers and everyday technology — brought together in one considered collection.</p>
+        <div class="hero-actions"><a class="button button-gold" href="#products">Explore the collection</a><a class="text-link" href="#collections">Discover categories <span>↗</span></a></div>
+        <div class="hero-note"><span class="gold-line"></span> QUALITY · STYLE · TECHNOLOGY</div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-image-frame"><img src="images/glasses-black-gold.jpeg" alt="Black and gold statement eyewear"></div>
+        <div class="hero-caption"><span>01 / EYEWEAR</span><span>THE DETAILS MATTER</span></div>
+        <div class="hero-stamp">E<br>X<br>.</div>
+      </div>
+    </section>
+
+    <section class="intro-strip" id="about">
+      <p>MORE THAN A STORE</p><h2>A sharper point of view.</h2>
+      <span>From standout frames to essential technology, find pieces that fit your world.</span>
+    </section>
+
+    <section class="section collections-section" id="collections">
+      <div class="section-heading"><div><p class="eyebrow">EXPLORE</p><h2>Shop by collection</h2></div><p class="section-side-note">A place for the things<br>you use and love.</p></div>
+      <div class="collection-grid">
+        <a class="collection-card collection-large" href="#products" data-category-link="Eyewear">
+          <img src="images/glasses-clear-silver.jpeg" alt="Clear and silver eyewear">
+          <span class="collection-number">01</span><div><p>THE FRAME EDIT</p><h3>Eyewear</h3><span class="collection-link">Explore collection ↗</span></div>
+        </a>
+        <a class="collection-card" href="#products" data-category-link="Computers">
+          <div class="collection-placeholder laptop-art"><span>TECHNOLOGY / 02</span><b>Work<br>without<br>limits.</b><i>EX.</i></div>
+          <div><p>POWER & PERFORMANCE</p><h3>Computers</h3><span class="collection-link">Explore collection ↗</span></div>
+        </a>
+        <a class="collection-card" href="#products" data-category-link="Phones">
+          <div class="collection-placeholder phone-art"><span>CONNECTED / 03</span><b>Stay<br>in your<br>element.</b><i>EX.</i></div>
+          <div><p>EVERYDAY INNOVATION</p><h3>Phones & accessories</h3><span class="collection-link">Explore collection ↗</span></div>
+        </a>
+      </div>
+    </section>
+
+    <section class="section products-section" id="products">
+      <div class="section-heading"><div><p class="eyebrow">CURATED FOR YOU</p><h2>Featured pieces</h2></div><p class="section-side-note">Selected products.<br>Uncomplicated shopping.</p></div>
+      <div class="filters" id="filters">
+        <button class="filter active" data-filter="All">All products</button><button class="filter" data-filter="Eyewear">Eyewear</button><button class="filter" data-filter="Computers">Computers</button><button class="filter" data-filter="Phones">Phones</button><button class="filter" data-filter="Accessories">Accessories</button>
+      </div>
+      <div class="product-grid" id="productGrid"><div class="loading">Loading the collection…</div></div>
+    </section>
+
+    <section class="service-band">
+      <div><span>01</span><h3>Considered selection</h3><p>Products chosen for style, quality and everyday use.</p></div>
+      <div><span>02</span><h3>Personal assistance</h3><p>Questions? Speak with the team directly on WhatsApp.</p></div>
+      <div><span>03</span><h3>Convenient ordering</h3><p>Place an order online or enquire before you buy.</p></div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <p class="eyebrow">LET'S CONNECT</p><h2>Need a little more<br><em>information?</em></h2>
+      <p>Our team is ready to help you find the right piece.</p>
+      <a class="button button-gold" id="contactWhatsApp" href="https://wa.me/260000000000">Talk to Extravagant</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="wordmark" href="#home">EXTRAVAGANT<span>.</span></a>
+    <p>Quality. Style. Technology.</p>
+    <div><a href="#collections">Collections</a><a href="#products">Shop</a><a href="#contact">Contact</a><a href="admin.html">Staff</a></div>
+    <small>© <span id="year"></span> Extravagant. All rights reserved.</small>
+  </footer>
+
+  <div class="overlay" id="cartOverlay" aria-hidden="true">
+    <aside class="drawer" aria-label="Shopping bag">
+      <div class="drawer-head"><h2>Your bag</h2><button class="close-button" id="cartClose" aria-label="Close bag">×</button></div>
+      <div id="cartItems" class="cart-items"><p class="muted">Your bag is currently empty.</p></div>
+      <div class="cart-summary"><div><span>Subtotal</span><strong id="cartSubtotal">K0.00</strong></div><button class="button button-gold button-full" id="checkoutOpen">Continue to checkout</button><button class="text-link centered" id="continueShopping">Continue shopping</button></div>
+    </aside>
+  </div>
+
+  <div class="modal-backdrop" id="checkoutModal" aria-hidden="true">
+    <section class="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+      <div class="drawer-head"><div><p class="eyebrow">SECURE ORDER REQUEST</p><h2 id="checkoutTitle">Checkout</h2></div><button class="close-button" id="checkoutClose" aria-label="Close checkout">×</button></div>
+      <form id="checkoutForm">
+        <label>Full name<input name="customer_name" required autocomplete="name"></label>
+        <label>Phone number<input name="phone" required autocomplete="tel" placeholder="e.g. 097XXXXXXX"></label>
+        <label>Email (optional)<input name="email" type="email" autocomplete="email"></label>
+        <label>Delivery area / address<textarea name="address" required rows="2"></textarea></label>
+        <label>How would you like to pay?
+          <select name="payment_method" required><option value="MTN MoMo">MTN Mobile Money</option><option value="Airtel Money">Airtel Money</option><option value="Pay on collection">Pay on collection / agree with seller</option></select>
+        </label>
+        <div class="checkout-total"><span>Order total</span><strong id="checkoutTotal">K0.00</strong></div>
+        <p class="small-note">This sends an order request. Mobile-money payment is not taken automatically yet. The seller will confirm payment instructions with you.</p>
+        <button class="button button-gold button-full" type="submit">Place order request</button>
+        <p class="form-message" id="checkoutMessage" role="status"></p>
+      </form>
+    </section>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="store.js"></script>
+</body>
+</html>
